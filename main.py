@@ -24,12 +24,20 @@ def remove_duplicates_from_list(items):
 if __name__ == "__main__":
     filename = DEFAULT_FILENAME
     remove_duplicates = DEFAULT_DUPLICATES
-    if len(sys.argv) == 3:
+    if len(sys.argv) == 4:
+        ascending = sys.argv[3]
+        if ascending == 'ascending':
+            ascending = True
+        elif ascending == 'descending':
+            ascending = False
+        else:
+             print("El tercer argumento solo admite como valores ascending o descending")
         filename = sys.argv[1]
         remove_duplicates = sys.argv[2].lower() == "yes"
     else:
         print("Se debe indicar el fichero como primer argumento")
         print("El segundo argumento indica si se quieren eliminar duplicados")
+        print("El tercer argumento indica si se quieren ordenar de forma ascendiente o descendiente.[ascending, descending]")
         sys.exit(1)
 
     print(f"Se leerán las palabras del fichero {filename}")
@@ -46,4 +54,4 @@ if __name__ == "__main__":
     if remove_duplicates:
         word_list = remove_duplicates_from_list(word_list)
 
-    print(sort_list(word_list))
+    print(sort_list(word_list,ascending=ascending))
