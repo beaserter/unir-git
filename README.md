@@ -27,3 +27,6 @@ Digest: sha256:2cfebc27956e6a55f78606864d91fe527696f9e32a724e6f9702b5f9602d0474
 Status: Downloaded newer image for python:3.6-slim
 Se leerán las palabras del fichero words.txt
 ['Este', 'analizará', 'creado', 'documento', 'el', 'es', 'que', 'script']
+## Zip
+
+Se almacena en el directorio, el archivo 'unir-git-master.zip', con el código fuente del repositorio sin modificar
